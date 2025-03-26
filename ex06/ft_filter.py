@@ -11,7 +11,7 @@ from collections.abc import Iterable
 #     is_same_sequence(s1, s2)
 #
 #     s1 = filter(None, l2)
-#     s2 = ft_filter(None, 2)
+#     s2 = ft_filter(None, l2)
 #     is_same_sequence(s1, s2)
 #
 #     s1 = filter(str.isalpha, string)
