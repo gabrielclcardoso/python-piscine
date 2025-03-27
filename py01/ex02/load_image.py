@@ -4,6 +4,10 @@ import sys
 
 
 def ft_load(path: str) -> np.ndarray:
+    """Loads image on the path, prints its shape and returns a 3d array
+    representing each pixel as its RGB color
+    """
+
     try:
         image = Image.open(path)
     except Exception as e:
