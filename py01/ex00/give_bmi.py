@@ -22,8 +22,8 @@ def lists_are_valid(l1, l2) -> bool:
         return False
     elif len(l1) == 0:
         return True
-    elif not isinstance(l1[0], float | int) or not isinstance(
-            l2[0], float | int):
+    elif any(not isinstance(i, float | int) for i in l1) or any(
+            not isinstance(i, float | int) for i in l2):
         print("Error: list does not contain float or int")
         return False
     return True
@@ -58,16 +58,34 @@ def list_is_valid(lst: list[int | float]) -> bool:
 # def main():
 #     height = [2.71, 1.15]
 #     weight = [165.3, 38.4]
-#     fake = ['a', 'b']
 #
 #     bmi = give_bmi(height, weight)
 #     print(bmi, type(bmi))
+#     print(apply_limit(bmi, 26))
+#     print()
+#
+#     height = [2.71, "error"]
+#     weight = [165.3, "iminent"]
+#
+#     bmi = give_bmi(height, weight)
+#     print(bmi, type(bmi))
+#     print(apply_limit(bmi, 26))
+#     print()
+#
 #     bmi = give_bmi([], [])
 #     print(bmi, type(bmi))
+#     print(apply_limit(bmi, 26))
+#     print()
 #
+#     fake = ['a', 'b']
 #     bmi = give_bmi(fake, height)
+#     print()
+#
 #     bmi = give_bmi(None, height)
+#     print()
+#
 #     bmi = give_bmi(height, None)
+#     print()
 #
 #     print(apply_limit(bmi, 26))
 #
