@@ -16,5 +16,4 @@ def ft_load(path: str) -> np.ndarray:
 
     arr = np.array(image)
     print(f"The shape of image is: {arr.shape}")
-    np.set_printoptions(threshold=1)
     return arr
