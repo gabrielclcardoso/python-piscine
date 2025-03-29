@@ -13,7 +13,7 @@ def load(path: str) -> pd.DataFrame:
         return None
 
     print(f"Loading dataset of dimenstions {data.shape}")
-    print(data)
+    return data
 
 
 # def main():
