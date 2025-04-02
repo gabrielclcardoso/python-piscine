@@ -5,6 +5,10 @@ import matplotlib.ticker as ticker
 
 def main():
     data = load("life_expectancy_years.csv")
+    if data is None:
+        print("Error: file not found")
+        exit(1)
+
     data.set_index('country', inplace=True)
     points = data.loc['Brazil']
     print(points)

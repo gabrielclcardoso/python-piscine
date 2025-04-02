@@ -5,6 +5,9 @@ import matplotlib.ticker as ticker
 
 def main():
     data = load("population_total.csv")
+    if data is None:
+        print("Error: file not found")
+        exit(1)
 
     data.set_index('country', inplace=True)
     p1 = data.loc['Brazil']
