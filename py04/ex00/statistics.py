@@ -97,7 +97,8 @@ def get_std(iter) -> float | str:
 #                   toto="mean", tutu="median", tata="quartile")
 #     print("-----")
 #
-#     ft_statistics(5, 75, 450, 18, 597, 27474, 48575, hello="std", world="var")
+#     ft_statistics(5, 75, 450, 18, 597, 27474, 48575,
+#                   hello="std", world="var")
 #     print("-----")
 #
 #     ft_statistics(5, 75, 450, 18, 597, 27474, 48575,
