@@ -1,5 +1,5 @@
-import matplotlib.pyplot as plt
-from load_image import ft_load
+# import matplotlib.pyplot as plt
+# from load_image import ft_load
 from numpy import ndarray as array
 
 
