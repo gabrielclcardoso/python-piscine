@@ -11,7 +11,6 @@ def main():
 
     data.set_index('country', inplace=True)
     points = data.loc['Brazil']
-    print(points)
 
     fig, ax = plt.subplots()
     ax.plot(points)

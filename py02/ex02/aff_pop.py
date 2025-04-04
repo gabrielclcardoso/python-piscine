@@ -10,6 +10,7 @@ def main():
         exit(1)
 
     data.set_index('country', inplace=True)
+    data = data.loc[:, :'2050']
     p1 = data.loc['Brazil']
     p2 = data.loc['Thailand']
 
