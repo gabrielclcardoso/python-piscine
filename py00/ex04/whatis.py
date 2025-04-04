@@ -15,3 +15,22 @@ try:
 except Exception:
     print("AssertionError: argument is not an integer")
     exit(1)
+
+# TESTER
+# #!/bin/bash
+#
+# echo -e "\npython whatis.py 14"
+# python whatis.py 14
+#
+# echo -e "\npython whatis.py -5"
+# python whatis.py -5
+#
+# echo -e "\npython whatis.py"
+# python whatis.py
+#
+# echo -e "\npython whatis.py Hi!"
+# python whatis.py Hi!
+#
+# echo -e "\npython whatis.py 13 5"
+# python whatis.py 13 5
+########
