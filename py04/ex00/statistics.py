@@ -2,7 +2,8 @@ import math
 
 
 def ft_statistics(*args: any, **kwargs: any) -> None:
-    """Docstring"""
+    """Given an array of numbers and a list of information to be retrieved as
+    keyword arguments, prints the information or ERROR"""
 
     performed_operations = []
 
