@@ -1,12 +1,18 @@
 def square(x: int | float) -> int | float:
+    """Returns the square of x"""
     return x ** 2
 
 
 def pow(x: int | float) -> int | float:
+    """Returns the power of x by itself"""
+
     return x ** x
 
 
 def outer(x: int | float, function) -> object:
+    """Returns a function that calls the function given with x and stores the
+    result for subsequent calls"""
+
     count = 0
 
     def inner() -> float:
