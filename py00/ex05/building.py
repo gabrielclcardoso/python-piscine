@@ -1,14 +1,17 @@
 import sys
-import string
 
 
 def main():
     text = ""
 
+    try:
+        assert len(sys.argv) <= 2, "more than one argument are provided"
+    except Exception as e:
+        print(f"{type(e).__name__}: {e}")
+        exit(1)
+
     if len(sys.argv) == 1:
         text = get_text()
-    elif len(sys.argv) > 2:
-        return 1
     else:
         text = sys.argv[1]
 
@@ -42,16 +45,16 @@ def count_text(text: str):
     }
 
     for i in text:
-        if i in string.ascii_uppercase:
+        if i.isupper():
             counts['ucl'] += 1
-        elif i in string.ascii_lowercase:
+        elif i.islower():
             counts['lcl'] += 1
-        elif i in string.punctuation:
-            counts['pm'] += 1
         elif i.isspace():
             counts['s'] += 1
-        elif i in string.digits:
+        elif i.isdecimal():
             counts['d'] += 1
+        elif i.isprintable():
+            counts['pm'] += 1
 
     print(
         f"""The text contains {len(text)} characters:

@@ -1,17 +1,18 @@
-from collections.abc import Iterable
-
-
 def ft_filter(function, iterable):
-    """Recreation of the built in function filter"""
-    if not isinstance(iterable, Iterable):
-        print("Error: did not receive iterable")
-        return
+    """\
+Return an iterator yielding those items of iterable for which \
+function(item)
+is true. If function is None, return the items that are true.
+"""
+
     if function:
         sequence = [i for i in iterable if function(i)]
     else:
         sequence = [i for i in iterable if i]
-    for i in sequence:
-        yield i
+    return iter(sequence)
+
+
+ft_filter.__doc__ = filter.__doc__
 
 
 # def main():
